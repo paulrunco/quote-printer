@@ -1,0 +1,38 @@
+@media print{
+  container {
+    width: 8.5in;
+    height: 11in;
+  }
+}
+
+
+#container {
+  margin: auto;
+  width: 8.5in;
+}
+
+.logo {
+  background-image: url("CADCUTlogo_RGB.jpg");
+  background-size: cover;
+  width: 307px;
+  height: 90px;
+}
+
+.location {
+  display: inline-block;
+  margin: 0 50px;
+  vertical-align: top;
+}
+
+h3, p {
+  margin-bottom: -10px;
+}
+
+#quote-grid {
+  margin: 20px 0;
+}
+
+.heading {
+  margin: 20px 0;
+  border: 1px solid #000;
+}

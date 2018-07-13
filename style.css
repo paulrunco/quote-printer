@@ -3,12 +3,21 @@
     width: 8.5in;
     height: 11in;
   }
+  input {
+    border: none;
+  }
+  button {
+    visibility: hidden;
+  }
 }
-
 
 #container {
   margin: auto;
   width: 8.5in;
+}
+
+#header {
+  width: 100%
 }
 
 .logo {
@@ -16,6 +25,18 @@
   background-size: cover;
   width: 307px;
   height: 90px;
+  display: inline-block;
+}
+
+.contact {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  float: right;
+}
+
+.address-bar {
+  text-align: center;
 }
 
 .location {
@@ -28,11 +49,86 @@ h3, p {
   margin-bottom: -10px;
 }
 
-#quote-grid {
-  margin: 20px 0;
+input {
+  text-align: center;
 }
 
-.heading {
+#quote-heading-title {
   margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-heading {
+  display: inline-block;
+  width: 32%;
+  vertical-align: bottom;
+}
+
+#quote-heading-title > h2 {
+  background-color: lightgray;
+  padding: 7px 10px;
+  border-radius: 30px;
+  margin: 0 0 -7px 0;
+  color: #000;
+}
+
+#quote-heading {
+  width: 100%;
+  display: table;
+  margin-bottom: 20px;
+}
+
+#customer-address {
+
+  display: table-cell;
+  width: 44%;
   border: 1px solid #000;
+  border-radius: 5px;
+  margin-right: 2px;
+  float: left;
+  padding: 20px;
+}
+
+#customer-address > input {
+  text-align: left;
+  margin-left: 20px;
+}
+
+#valid-dates {
+  display: table-cell;
+  width: 44%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 2px;
+  float: right;
+  padding: 20px;
+  height: auto;
+}
+
+#quote-grid {
+
+}
+
+
+
+#quote-grid-table {
+  width: 100%;
+  text-align:center;
+}
+
+#quote-grid-table td {
+  padding: 5px;
+}
+
+.rev-field {
+  width: 20px;
+}
+
+#add_row {
+  text-align: center;
+}
+
+#row-controls {
+  text-align: center;
 }

@@ -4,10 +4,12 @@
     height: 11in;
   }
   input {
-       border: none;
- }
+    border: none;
+  }
+  button {
+    visibility: hidden;
+  }
 }
-
 
 #container {
   margin: auto;
@@ -16,7 +18,7 @@
 }
 
 #header {
-     width: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -28,14 +30,14 @@
 }
 
 .contact {
-     display: inline-block;
-     vertical-align: top;
-     text-align: right;
-     float: right;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  float: right;
 }
 
-#address-bar {
-     text-align: center;
+.address-bar {
+  text-align: center;
 }
 
 .location {
@@ -51,65 +53,84 @@ h3, p {
   margin-bottom: -10px;
 }
 
-#quote-grid {
-  margin: 20px 0;
+input {
+  text-align: center;
 }
 
-.title {
+#quote-heading-title {
   margin: 20px 0;
   width: 100%;
   text-align: center;
 }
 
-.sub-title {
-     display: inline-block;
-     width: 32%;
-     vertical-align: bottom;
+.sub-heading {
+  display: inline-block;
+  width: 32%;
+  vertical-align: bottom;
 }
 
-.title > h2 {
-     background-color: lightgray;
-     padding: 7px 10px;
-     border-radius: 30px;
-     margin: 0 0 -7px 0;
-     color: #000;;
+#quote-heading-title > h2 {
+  background-color: lightgray;
+  padding: 7px 10px;
+  border-radius: 30px;
+  margin: 0 0 -7px 0;
+  color: #000;
 }
 
-.title > h3 {
-     font-weight: normal;
+#quote-heading {
+  width: 100%;
+  display: table;
+  margin-bottom: 20px;
 }
 
-#quote-body {
-     padding: 0 10px;
+#customer-address {
+
+  display: table-cell;
+  width: 44%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-right: 2px;
+  float: left;
+  padding: 20px;
 }
 
-#quote-head {
-     border: 1px solid #000;
-     border-radius: 5px;
-     margin: 10px 20px;
-     padding: 3px;
+#customer-address > input {
+  text-align: left;
+  margin-left: 20px;
 }
 
-#header-input {
-     width: 99%;
-     resize: none;
-     border: none;
-     font-size: 12pt;
-     font-family: "Times New Roman", Times, serif;
+#valid-dates {
+  display: table-cell;
+  width: 44%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 2px;
+  float: right;
+  padding: 20px;
+  height: auto;
 }
 
 #quote-grid {
-     border: 1px solid #000;
-     border-radius: 5px;
-     margin: 0 20px;
-     padding: 5px 10px;
+
 }
 
-.quote-table {
-     width: 100%;
-     text-align: center;
+#quote-grid-table {
+  width: 100%;
+  text-align:center;
 }
 
-.left {
-     text-align: left;
+#quote-grid-table td {
+  padding: 5px;
+}
+
+.rev-field {
+  width: 20px;
+}
+
+#add_row {
+  text-align: center;
+}
+
+#row-controls {
+  text-align: center;
 }

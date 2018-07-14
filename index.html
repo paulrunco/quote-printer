@@ -5,21 +5,22 @@
   <head>
     <title>Quote Generator Version 0.1</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div id="container">
-         <div id="header">
-           <div class="logo">
-           </div><!--.logo -->
-           <div class="contact">
-                <p>1 Home Farm Way | Montpelier, VT 05602</p>
-                <p>T: (415)250-7419</p>
-                <p>F: (802)123-1456</p>
-           </div><!--.contact -->
-      </div><!--#header -->
-      <div id="address-bar">
+
+      <div id="header">
+        <div class="logo">
+        </div><!--.logo -->
+        <div class="contact">
+          <p>1 Home Farm Way | Montpelier, VT 05602</p>
+          <p>T: (802) 552-1540</P>
+          <p>F: (260) 399-4633</p>
+        </div><!--.contact -->
+
+      <div class="address-bar">
         <div class="location">
           <h3>Vermont</h3>
           <p>116 Three Mile Bridge Road</p>
@@ -37,41 +38,45 @@
         </div><!--.location -->
       </div><!--.address-bar -->
 
-      <div class="title">
-           <h3 class="sub-title">Quote #123456 Rev 3</h3>
-           <h2 class="sub-title">Quotation</h2>
-           <h3 class="sub-title">7/6/2018</h3>
-      </div><!-- .heading -->
+      <div id="quote-heading-title">
+           <h3 class="sub-heading">Quote #123456 Rev 3</h3>
+           <h2 class="sub-heading">Quotation</h2>
+           <h3 class="sub-heading">Page 1 of 2</h3>
+      </div><!-- .title -->
 
-      <div id="quote-body">
-           <div id="quote-head">
+      <div id="quote-heading">
+        <div id="customer-address">
+          <input type="text" placeholder="Attention"><br />
+          <input type="text" placeholder="Company"><br />
+          <input type="text" placeholder="C/O"><br />
+          <input type="text" placeholder="Address"><br />
+          <input type="text" placeholder="City, State Zip"><br />
+          <input type="text" placeholder="Country">
+        </div><!--.customer-address -->
+        <div id ="valid-dates"></div>
 
-                <textarea rows="6" id="header-input"></textarea>
+      </div><!-- quote-heading -->
 
-           </div><!--#quote-head -->
-           <div id="quote-grid">
-                <table class="quote-table">
-                     <tr>
-                          <th class="left">Line</th>
-                          <th>Item</th>
-                          <th>Description</th>
-                          <th>Qty</th>
-                          <th>Price</th>
-                          <th>Ext</th>
-                     </tr>
-                     <tr>
-                          <td class="left">10</td>
-                          <td><input type="text"></input></td>
-                          <td><input type="text"></input></td>
-                          <td><input type="text"></input></td>
-                          <td><input type="text"></input></td>
-                          <td><input type="text"></input></td>
-                     </tr>
-                </table>
+        <div id="quote-grid">
+          <table id="quote-grid-table">
+            <tbody>
+              <tr>
+                <th>Line</th>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Rev</th>
+                <th>Drawing</td>
+                <th>
+              </tr>
+            </tbody>
+          </table>
 
 
-           </div><!--#quote-head -->
-      </div><!--#quote-grid -->
+        </div><!--#quote-grid -->
+
+        <div id="row-controls">
+          <button type="button" id="add_row">Add Line</button>
+        </div><!--#row-controls -->
     </div><!--#container -->
   </body>
 </html>

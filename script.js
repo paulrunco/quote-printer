@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
-   $("#valid-dates").css("height", $("#customer-address").height());
+   $('.price').blur(function() {
+       $('.price').formatCurrency();
+   });
 
    $("#add_row").click(function(){
-     numRows = $('#quote-grid-table tr').length
+     numRows = $('#quote-grid-table tr').length - 1; // don't count header row
      var lineNum = '<td>' + numRows + '</td>'
      var partNum = '<td><input type="text" size="20"></td>'
      var desc = '<td><input type="text" size="40"></td>'

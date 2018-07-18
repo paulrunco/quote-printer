@@ -6,6 +6,9 @@
   input {
     border: none;
   }
+  ::-webkit-input-placeholder {
+      color: transparent;
+  }
   button {
     visibility: hidden;
   }
@@ -55,6 +58,8 @@ h3, p {
 
 input {
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
 }
 
 #quote-heading-title {
@@ -80,34 +85,42 @@ input {
 #quote-heading {
   width: 100%;
   display: table;
+  border-spacing: 5px;
   margin-bottom: 20px;
 }
 
 #customer-address {
-
   display: table-cell;
-  width: 44%;
+  width: 49%;
   border: 1px solid #000;
   border-radius: 5px;
   margin-right: 2px;
-  float: left;
-  padding: 20px;
 }
 
-#customer-address > input {
+#customer-address-form {
+    padding: 20px;
+}
+
+#customer-address-form > input {
   text-align: left;
-  margin-left: 20px;
 }
 
 #valid-dates {
   display: table-cell;
-  width: 44%;
+  width: 49%;
   border: 1px solid #000;
   border-radius: 5px;
   margin-left: 2px;
-  float: right;
-  padding: 20px;
-  height: auto;
+  text-align: right;
+}
+
+#valid-dates-form {
+    padding: 20px;
+}
+
+#valid-dates > input {
+    margin-right: 50px;
+    text-align: right;
 }
 
 #quote-grid {

@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-   $("#valid-dates").css("height", $("#customer-address").height());
-
    $("#add_row").click(function(){
      numRows = $('#quote-grid-table tr').length
      var lineNum = '<td>' + numRows + '</td>'
@@ -16,7 +14,7 @@ $(document).ready(function(){
 
    $("#del_row").click(function(){
      $(this).closest('tr').remove();
-     return false;
+     //return false;
    });
 
 });

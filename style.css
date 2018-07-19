@@ -15,45 +15,45 @@
 }
 
 #container {
-  margin: auto;
-  padding: 0 20px;
-  width: 8.5in;
+    margin: auto;
+    padding: 0 20px;
+    width: 8.5in;
 }
 
 #header {
-  width: 100%;
+    width: 100%;
 }
 
 .logo {
-  background-image: url("CADCUTlogo_RGB.jpg");
-  background-size: cover;
-  width: 307px;
-  height: 90px;
-  display: inline-block;
+    background-image: url("CADCUTlogo_RGB.jpg");
+    background-size: cover;
+    width: 307px;
+    height: 90px;
+    display: inline-block;
 }
 
 .contact {
-  display: inline-block;
-  vertical-align: top;
-  text-align: right;
-  float: right;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    float: right;
 }
 
 .address-bar {
-  text-align: center;
+    text-align: center;
 }
 
 .location {
-  display: inline-block;
-  margin: 0 10px;
-  vertical-align: top;
-  margin-bottom: 10px;
-  width: 30%;
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 30%;
 
 }
 
 h3, p {
-  margin-bottom: -10px;
+    margin-bottom: -10px;
 }
 
 input {
@@ -63,26 +63,27 @@ input {
 }
 
 #quote-heading-title {
-  margin: 20px 0;
-  width: 100%;
-  text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .sub-heading {
-  display: inline-block;
-  width: 32%;
-  vertical-align: bottom;
+    display: inline-block;
+    width: 32%;
+    vertical-align: bottom;
 }
 
 #quote-heading-title > h2 {
-  background-color: lightgray;
-  padding: 7px 10px;
-  border-radius: 30px;
-  margin: 0 0 -7px 0;
-  color: #000;
+    background-color: lightgray;
+    padding: 7px 10px;
+    border-radius: 30px;
+    margin: 0 0 -7px 0;
+    color: #000;
 }
 
 #quote-heading {
+<<<<<<< HEAD
   width: 100%;
   display: table;
   border-spacing: 5px;
@@ -121,29 +122,79 @@ input {
 #valid-dates > input {
     margin-right: 50px;
     text-align: right;
+=======
+    width: 100%;
+    display: table;
+    margin-bottom: 20px;
+}
+
+#customer-address {
+
+    display: table-cell;
+    width: 44%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-right: 2px;
+    float: left;
+    padding: 20px;
+}
+
+#customer-address > input {
+    text-align: left;
+    margin-left: 20px;
+}
+
+#valid-dates {
+    display: table-cell;
+    width: 44%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 2px;
+    float: right;
+    padding: 20px;
+    height: auto;
+>>>>>>> f07e572396e61777a477db99fa253f4c6e5b362e
 }
 
 #quote-grid {
-
+    text-align: center;
+    overflow: auto;
 }
 
-#quote-grid-table {
-  width: 100%;
-  text-align:center;
+#quote-grid table {
+    border-spacing: 0px;
 }
 
-#quote-grid-table td {
-  padding: 5px;
+#quote-grid th {
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
 }
 
-.rev-field {
-  width: 20px;
+.pnum-line-table {
+    width: 100%;
+}
+
+.qty-line {
+    float: right;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.qty-line-table {
+    width: 100%;
+    margin-top: 20px;
+
+}
+.qty-input {
+    width: 60px;
 }
 
 #add_row {
-  text-align: center;
+    text-align: center;
 }
 
 #row-controls {
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }

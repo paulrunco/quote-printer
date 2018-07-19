@@ -112,18 +112,34 @@ input {
 
 #quote-grid {
     text-align: center;
+    overflow: auto;
+}
+
+#quote-grid table {
+    border-spacing: 0px;
+}
+
+#quote-grid th {
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
 }
 
 .pnum-line-table {
-    margin: auto;
+    width: 100%;
+}
+
+.qty-line {
+    float: right;
+    width: 60%;
+    margin-bottom: 30px;
 }
 
 .qty-line-table {
-    margin: auto;
+    width: 100%;
     margin-top: 20px;
-    margin-right: 22px;
-}
 
+}
 .qty-input {
     width: 60px;
 }

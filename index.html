@@ -2,101 +2,68 @@
 
 
 <html>
-<head>
-    <title>Quote Generator Version 0.1</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div id="container">
+    <head>
+        <title>Quote Generator Version 0.1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="container">
 
-        <div id="header">
-            <div class="logo">
-            </div><!--.logo -->
-            <div class="contact">
-                <p>1 Home Farm Way | Montpelier, VT 05602</p>
-                <p>T: (802) 552-1540</P>
-                    <p>F: (260) 399-4633</p>
+            <div id="header">
+                <div class="logo"></div><!--.logo -->
+                <div class="contact">
+                    <p>1 Home Farm Way | Montpelier, VT 05602</p>
+                    <p>T: (802) 552-1540</P>
+                        <p>F: (260) 399-4633</p>
                 </div><!--.contact -->
+            </div><!--#header -->
 
-                <div class="address-bar">
-                    <div class="location">
-                        <h3>Vermont</h3>
-                        <p>116 Three Mile Bridge Road</p>
-                        <p>Middlesex, VT 05602</p>
-                    </div><!--.location -->
-                    <div class="location">
-                        <h3>Texas</h3>
-                        <p>2300 I-35 Suite 104</p>
-                        <p>Denton, TX 54321</p>
-                    </div><!--.location -->
-                    <div class="location">
-                        <h3>Atlanta</h3>
-                        <p>410 Horizon Drive</p>
-                        <p>Suwanee, GA 12345</p>
-                    </div><!--.location -->
-                </div><!--.address-bar -->
+            <div class="address-bar">
+                <div class="location">
+                    <h3>Vermont</h3>
+                    <p>116 Three Mile Bridge Road</p>
+                    <p>Middlesex, VT 05602</p>
+                </div><!--.location -->
+                <div class="location">
+                    <h3>Texas</h3>
+                    <p>2300 I-35 Suite 104</p>
+                    <p>Denton, TX 54321</p>
+                </div><!--.location -->
+                <div class="location">
+                    <h3>Atlanta</h3>
+                    <p>410 Horizon Drive</p>
+                    <p>Suwanee, GA 12345</p>
+                </div><!--.location -->
+            </div><!--.address-bar -->
 
-                <div id="quote-heading-title">
-                    <h3 class="sub-heading">Quote #123456 Rev 3</h3>
-                    <h2 class="sub-heading">Quotation</h2>
-                    <h3 class="sub-heading">Page 1 of 2</h3>
-                </div><!-- .title -->
+            <div id="quote-heading-title">
+                <h3 class="sub-heading">Quote #123456 Rev 3</h3>
+                <h2 class="sub-heading">Quotation</h2>
+                <h3 class="sub-heading">Page 1 of 2</h3>
+            </div><!-- .quote-heading-title -->
 
-                <div id="quote-heading">
-                    <div id="customer-address">
-                        <input type="text" placeholder="Attention"><br />
-                        <input type="text" placeholder="Company"><br />
-                        <input type="text" placeholder="C/O"><br />
-                        <input type="text" placeholder="Address"><br />
-                        <input type="text" placeholder="City, State Zip"><br />
-                        <input type="text" placeholder="Country">
-                    </div><!--.customer-address -->
-                    <div id ="valid-dates"></div>
+            <div id="quote-heading">
+                <div id="customer-address">
+                    <input type="text" placeholder="Attention"><br />
+                    <input type="text" placeholder="Company"><br />
+                    <input type="text" placeholder="C/O"><br />
+                    <input type="text" placeholder="Address"><br />
+                    <input type="text" placeholder="City, State Zip"><br />
+                    <input type="text" placeholder="Country">
+                </div><!--.customer-address -->
+                <div id ="valid-dates"></div>
+            </div><!-- quote-heading -->
 
-                </div><!-- quote-heading -->
-
-                <div id="quote-grid">
-                    <div class="quote-line">
-                        <div class="pnum-line">
-                            <table class="pnum-line-table">
-                                <tr>
-                                    <th>Line</th>
-                                    <th>Part Number</th>
-                                    <th>Description</th>
-                                    <th>Rev</th>
-                                    <th>Drawing</th>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td><input type="text" size="20"></td>
-                                    <td><input type="text" size="40"></td>
-                                    <td><input type="text" size="4"></td>
-                                    <td><input type="text" size="20"></td>
-                                </tr>
-                            </table>
-                        </div><!--.pnum-line -->
-                        <div class="qty-line">
-                            <table class="qty-line-table">
-                                <tr>
-                                    <th>Quantity</th>
-                                    <th>Unit Price</th>
-                                    <th>Net Price</th>
-                                </tr>
-                                <tr>
-                                    <td><input type="number" class="qty-input"></td>
-                                    <td><input type="number" min="0.01" step="0.01"></td>
-                                    <td><input type="number" min="0.01" step="0.01"></td>
-                                </tr>
-                            </table>
-
-                        </div><!--.qty-line-->
-                    </div><!--.quote-line -->
+            <div id="quote-grid">
+                <!-- Quote Lines are Inserted Here -->
             </div><!--#quote-grid -->
+
             <div id="row-controls">
                 <button type="button" id="add_row">Add Line</button>
             </div><!--#row-controls -->
+
         </div><!--#container -->
     </body>
 </html>

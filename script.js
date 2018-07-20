@@ -37,6 +37,7 @@ function addQuoteLine() {
                                 '</tr>',
                             '</table>',
                         '</div><!--.pnum-line -->'].join('');
+    var lineComment = ['<div class="line-comment"><textarea class="autoExpand rows="2"></textarea></div>']
     var qtyLine = ['<div class="qty-line">',
                         '<table class="qty-line-table">',
                             '<tr>',
@@ -53,6 +54,6 @@ function addQuoteLine() {
                     '</div><!--.qty-line-->',
                 '</div><!--.quote-line -->'].join('');
 
-        $('#quote-grid').append(partLine + qtyLine);
+        $('#quote-grid').append(partLine + lineComment + qtyLine);
 
 }

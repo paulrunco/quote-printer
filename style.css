@@ -83,7 +83,6 @@ input {
 }
 
 #quote-heading {
-<<<<<<< HEAD
   width: 100%;
   display: table;
   border-spacing: 5px;
@@ -153,7 +152,6 @@ input {
     float: right;
     padding: 20px;
     height: auto;
->>>>>>> f07e572396e61777a477db99fa253f4c6e5b362e
 }
 
 #quote-grid {

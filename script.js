@@ -37,8 +37,10 @@ function addQuoteLine() {
                                 '</tr>',
                             '</table>',
                         '</div><!--.pnum-line -->'].join('');
+    var lineComment = ['<div class="line-comment"><textarea placeholder="Line comments..." ></textarea></div>']
     var qtyLine = ['<div class="qty-line">',
-                        '<table class="qty-line-table">',
+                        '<div class="qty-line-left"></div>',
+                        '<div class="qty-line-right"><table class="qty-line-table">',
                             '<tr>',
                                 '<th>Quantity</th>',
                                 '<th>Unit Price</th>',
@@ -47,12 +49,13 @@ function addQuoteLine() {
                             '<tr>',
                                 '<td><input type="number" class="qty-input"></td>',
                                 '<td><input type="number" class="unit-price-input" min="0.01" step="0.01"></td>',
-                                '<td><input type="number" class="net-price-input" min="0.01" step="0.01"></td>',
+                                '<td><p class="net-price"></p></td>',
                             '</tr>',
-                        '</table>',
+                        '</table></div><!--.qty-line-right-->',
                     '</div><!--.qty-line-->',
+                    '<div class="quote-line-controls"><a href="#" onclick="return false;" class="del-row">Delete Row</a></div>',
                 '</div><!--.quote-line -->'].join('');
 
-        $('#quote-grid').append(partLine + qtyLine);
+        $('#quote-grid').append(partLine + lineComment + qtyLine);
 
 }

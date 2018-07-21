@@ -1,3 +1,5 @@
+
+
 #container {
     margin: auto;
     padding: 0 20px;
@@ -31,25 +33,26 @@
     display: inline-block;
     margin: 0 10px;
     vertical-align: top;
-    margin-bottom: 10px;
     width: 30%;
 }
 
-h3, p {
+h3, p{
     margin-bottom: -10px;
 }
 
 input{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     text-align: center;
 }
 
 textarea {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
 #quote-heading-title {
-    margin: 20px 0;
+    margin: 20px 0 20px 0;
     width: 100%;
     text-align: center;
 }
@@ -71,6 +74,7 @@ textarea {
 #quote-heading {
     width: 100%;
     display: table;
+    border-spacing: 10px 0;
     margin-bottom: 10px;
 }
 
@@ -98,6 +102,7 @@ textarea {
 
 #quote-comments {
     margin: auto;
+    margin: 0 10px;;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 10px;
@@ -106,7 +111,7 @@ textarea {
 
 #quote-comments textarea {
     padding: 10px 10px;
-    width: 771px;
+    width: 752px;
     resize: vertical;
 }
 
@@ -120,13 +125,23 @@ textarea {
     margin-bottom: 10px;
 }
 
+#quote-grid tr {
+    border-radius: 10px;
+}
+
 #quote-grid th {
     background-color: lightgray;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
+}
+
+#quote-grid p {
+    padding: 0;
+    margin: 0;
 }
 
 .quote-line {
-    margin-bottom: 50px;
+    overflow: auto;
+    page-break-inside: avoid;
 }
 
 .pnum-line-table {
@@ -141,23 +156,34 @@ textarea {
     text-align: left;
     width: 740px;
     padding: 10px 10px;
-    resize: vertical;
-    scroll-behavior:
 }
 
 .qty-line {
-    float: right;
+    display: table;
+    width: 100%;
+}
+
+.qty-line-left {
+    display: table-cell;
+    width: 40%;
+}
+
+.qty-line-right {
+    display: table-cell;
     width: 60%;
-    margin-bottom: 30px;
 }
 
 .qty-line-table {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .qty-input {
     width: 60px;
+}
+
+.quote-line-controls {
+    margin: 0 0 20px 0;;
 }
 
 #add_row {
@@ -182,10 +208,12 @@ textarea {
     textarea {
         resize: none;
     }
-    button {
-        visibility: hidden;
+
+    ::-webkit-input-placeholder, ::-webkit-textarea-placeholder {
+        color: transparent;
     }
-    ::-webkit-resizer {
-      color: white;
+
+    button, a {
+        visibility: hidden;
     }
 }

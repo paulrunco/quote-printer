@@ -1,3 +1,28 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+h3, p{
+    margin-bottom: -10px;
+}
+
+input{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+select {
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-color: lightgray;
+}
+
 #container {
     margin: auto;
     padding: 0 20px;
@@ -34,23 +59,8 @@
     width: 30%;
 }
 
-h3, p{
-    margin-bottom: -10px;
-}
-
-input{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    text-align: center;
-}
-
-textarea {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
 #quote-heading-title {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 10px 0;
     width: 100%;
     text-align: center;
 }
@@ -61,6 +71,10 @@ textarea {
     vertical-align: bottom;
 }
 
+#quote-heading-title h3 {
+    font-size: 16px;
+}
+
 #quote-heading-title > h2 {
     background-color: lightgray;
     padding: 7px 10px;
@@ -69,27 +83,24 @@ textarea {
     color: #000;
 }
 
+#quote-number {
+    width: 100px;
+}
+
+#rev {
+    width: 50px;
+}
+
 #quote-heading {
   width: 100%;
   display: table;
-  border-spacing: 5px;
-  margin-bottom: 20px;
+  border-spacing: 10px;
 }
 
-#customer-address {
-  display: table-cell;
-  width: 49%;
-  border: 1px solid #000;
-  border-radius: 5px;
-  margin-right: 2px;
-}
-
-#customer-address-form {
-    padding: 20px;
-}
-
-#customer-address-form > input {
-  text-align: left;
+#customer-address > input {
+    width: 300px;
+    text-align: left;
+    margin: 1px;
 }
 
 #valid-dates {
@@ -97,22 +108,21 @@ textarea {
   width: 49%;
   border: 1px solid #000;
   border-radius: 5px;
-  margin-left: 2px;
   text-align: right;
+  padding: 5px;
+  padding-right: 20px;
 }
 
-#valid-dates-form {
-    padding: 20px;
-}
-
-#valid-dates > input {
-    margin-right: 50px;
-    text-align: right;
-=======
-    width: 100%;
-    display: table;
-    border-spacing: 10px 0;
+#valid-dates-form select{
     margin-bottom: 10px;
+}
+
+#lead-time {
+    margin: auto;
+}
+
+#lead-time-input {
+    width: 20px;
 }
 
 #customer-address {
@@ -121,7 +131,7 @@ textarea {
     border: 1px solid #000;
     border-radius: 5px;
     margin-right: 2px;
-    padding: 20px;
+    padding: 10px;
 }
 
 #customer-address > input {
@@ -129,21 +139,12 @@ textarea {
     margin-left: 20px;
 }
 
-#valid-dates {
-    display: table-cell;
-    width: 50%;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 20px;
-}
-
 #quote-comments {
     margin: auto;
-    margin: 0 10px;;
+    margin: 0 10px 10px 10px;
     border: 1px solid #000;
     border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 8px;
 }
 
 #quote-comments textarea {
@@ -159,14 +160,14 @@ textarea {
 
 #quote-grid table {
     border-spacing: 0px;
-    margin-bottom: 10px;
 }
 
 #quote-grid tr {
     border-radius: 10px;
 }
 
-#quote-grid th {
+#quote-grid thead {
+    font-weight: bolder;
     background-color: lightgray;
     border: 2px solid lightgray;
 }
@@ -175,6 +176,8 @@ textarea {
     padding: 0;
     margin: 0;
 }
+
+/* LINE STYLES */
 
 .quote-line {
     overflow: auto;
@@ -186,16 +189,17 @@ textarea {
 }
 
 .line-comment {
-    margin-left: 38px;
+    margin-left: 41px;
 }
 
 .line-comment textarea {
     text-align: left;
-    width: 740px;
+    width: 718px;
     padding: 10px 10px;
 }
 
 .qty-line {
+    margin-top: -10px;
     display: table;
     width: 100%;
 }
@@ -220,27 +224,48 @@ textarea {
 }
 
 .quote-line-controls {
-    margin: 0 0 20px 0;;
+    text-align: right;
+    padding: 10px;
+    margin: 0 0 10px 0;
 }
 
 #add_row {
     text-align: center;
 }
 
-#row-controls {
-    margin-top: 20px;
+#quote-controls {
+    margin: 10px;
     text-align: center;
+}
+
+#footer {
+    margin: auto;
+    bottom: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#footer p {
+    margin: 0;
+    padding: 0;
 }
 
 /* PRINT MEDIA CONTROLS */
 
 @media print{
+
     container {
         width: 8.5in;
         height: 11in;
     }
+
     input, textarea{
         border: none;
+    }
+    select {
+        background-color: transparent;
+        border: none;
+        -webkit-appearance: none;
     }
     textarea {
         resize: none;
@@ -253,4 +278,17 @@ textarea {
     button, a {
         visibility: hidden;
     }
+
+    #add_row {
+        visibility: collapse;
+    }
+
+    #quote-controls, .quote-line-controls{
+        visibility: collapse;
+    }
+
+    #footer {
+        bottom: 0px;
+    }
+
 }

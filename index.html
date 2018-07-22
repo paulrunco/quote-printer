@@ -39,9 +39,9 @@
             </div><!--.address-bar -->
 
             <div id="quote-heading-title">
-                <h3 class="sub-heading">Quote #123456 Rev 3</h3>
+                <h3 class="sub-heading">Quote # <input type="text" id="quote-number"></h3>
                 <h2 class="sub-heading">Quotation</h2>
-                <h3 class="sub-heading">Page 1 of 2</h3>
+                <h3 class="sub-heading"> Rev <input type="text" id="rev"></h3>
             </div><!-- .quote-heading-title -->
 
             <div id="quote-heading">
@@ -52,7 +52,26 @@
                     <input type="text" placeholder="City, State Zip"><br />
                     <input type="text" placeholder="Country">
                 </div><!--.customer-address -->
-                <div id ="valid-dates">Some dates</div>
+                <div id ="valid-dates">
+                    <form id="valid-dates-form">
+                            <label>Valid from</label>
+                            <input type="date"><br />
+                            <label>Through</label>
+                            <input type="date"><br /><br />
+                            <label>Shipment </label>
+                            <input type="text" id="lead-time-input">
+                            <select>
+                                <option>Weeks</option>
+                                <option>Months</option>
+                            </select>
+                            <label>after reciept of </label>
+                            <select>
+                                <option>Order</option>
+                                <option>Material</option>
+                            </select>
+                        </form>
+                    </form>
+                </div><!--#valid-dates -->
             </div><!-- quote-heading -->
 
             <div id="quote-comments">
@@ -63,10 +82,14 @@
                 <!-- Quote Lines are Inserted Here -->
             </div><!--#quote-grid -->
 
-            <div id="row-controls">
+            <div id="quote-controls">
                 <button type="button" id="add_row">Add Line</button>
             </div><!--#row-controls -->
-
+            <div id="footer">
+                <p>This is a test footer to see how the formatting can work.</p>
+                <p>Another line</p>
+            </div><!--#footer -->
         </div><!--#container -->
+
     </body>
 </html>

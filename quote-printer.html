@@ -1,18 +1,19 @@
 <!DOCTYPE HTML>
 
 
-<html>
+<html lang="en">
     <head>
         <title>Quote Generator Version 0.1</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="resources/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/style.css">
+        <meta charset="UTF-8">
     </head>
     <body>
         <div id="container">
             <div id="header">
 
-                <div class="logo"></div><!--.logo -->
+                <div id="logo"></div><!--.logo -->
                 <div class="contact">
                     <p>1 Home Farm Way | Montpelier, VT 05602</p>
                     <p>T: (802) 552-1540</P>
@@ -57,7 +58,7 @@
                             <label>Valid from</label>
                             <input type="date"><br />
                             <label>Through</label>
-                            <input type="date"><br /><br />
+                            <input type="date"><br /><br /><br />
                             <label>Shipment </label>
                             <input type="text" id="lead-time-input">
                             <select>
@@ -70,12 +71,11 @@
                                 <option>Material</option>
                             </select>
                         </form>
-                    </form>
                 </div><!--#valid-dates -->
             </div><!-- quote-heading -->
 
             <div id="quote-comments">
-                <textarea id="quote-comment-text"></textarea>
+                <textarea id="quote-comment-text" placeholder="Quote comments..."></textarea>
             </div><!--#quote-comments -->
 
             <div id="quote-grid">
@@ -86,8 +86,12 @@
                 <button type="button" id="add_row">Add Line</button>
             </div><!--#row-controls -->
             <div id="footer">
-                <p>This is a test footer to see how the formatting can work.</p>
-                <p>Another line</p>
+                <p>THIS QUOTATION IS BASED ON THE FOLLOWING TERMS: EXCEPT FOR THE WARRANTY OF TITLE, NO OTHER WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE IS MADE. No claim by Buyer of any kind shall be greater in amount than the purchase price of
+the materials and/or services in respect to which damages are claimed. Seller shall have no liability whatsoever for special, incidental, indirect, punitive or consequential
+damages (including but not limited to damages for injury to persons or property). Failure of the Buyer to give Seller written notice of claim within sixty (60) days from the
+date of delivery shall constitute a waiver by Buyer of all claims in respect to such materials. This agreement shall be governed by Vermont law.</p>
+                <p id="iso">ISO 9001:2008 / AS9100:2009 Certified</p>
             </div><!--#footer -->
         </div><!--#container -->
 

@@ -2,8 +2,27 @@ $(document).ready(function(){
     addQuoteLine(); // add first row to quote grid
     reNumber(); // number the first rows
 
+    // Move browse function to div element
+    $('#load').click(function() {
+        $('input').click();
+    })
+
+    // Load JSON data from specified file
+    $('#input').change(loadQuote);
+
+    // Save file by downloading JSON object as .json file
+    $('#save').click(function() {
+        if ( !$('#quote-number').val().length > 0 ) {
+            alert("Please assign a quote number before saving");
+        }
+        else {
+            saveQuote();
+            $('#save-anchor')[0].click();
+        }
+    });
+
     // Add rows using button at bottom of page
-   $("#add_row").click(function(){
+   $("#add_row").click(function() {
        addQuoteLine();
        reNumber(); // number rows
    });
@@ -21,6 +40,32 @@ $(document).ready(function(){
    });
 
 });
+
+function loadQuote(event) {
+    var reader = new FileReader();
+    reader.onload = onReaderLoad;
+    var text = reader.readAsText(event.target.files[0]);
+}
+
+function onReaderLoad(event){
+        console.log(event.target.result);
+        var obj = JSON.parse(event.target.result);
+        $.each(obj, function () {
+            var name = this.name;
+            $("input[name="+name+"]").val(this.value);
+        });
+};
+
+function saveQuote() {
+    var quoteNum = $('#quote-number').val();
+    var header = $('#quote-heading-form').serializeArray();
+    var address = $('#customer-address-form').serializeArray();
+    var dataArray = $.extend({}, header, address);
+    var dataStr = "data:text/json;charset=utf-8 ," + JSON.stringify(dataArray);
+    var anchor = $('#save-anchor');
+    anchor.attr("href", dataStr );
+    anchor.attr("download", "" + quoteNum + ".json");
+}
 
 function reCalculateNet() {
     $('tr.calculate').each(function(i){

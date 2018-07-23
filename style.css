@@ -23,6 +23,48 @@ textarea {
     border-color: lightgray;
 }
 
+/* UPLOAD & DOWNLOAD CONTROL AREAS */
+
+#load {
+    opacity: 0.5;
+    background-image: url("img/up-up.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #999;
+    border-radius: 15px;
+    float: left;
+    position: absolute;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+#save {
+    opacity: 0.5;
+    background-image: url("img/down-up.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #999;
+    border-radius: 15px;
+    top: 10px;
+    float: right;
+    position: absolute;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+#save:hover, #load:hover {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+#save-anchor, #input {
+    display: none;
+}
+
 #container {
     margin: auto;
     padding: 0 20px;
@@ -75,7 +117,7 @@ textarea {
     font-size: 16px;
 }
 
-#quote-heading-title > h2 {
+#quote-heading-title h2 {
     background-color: lightgray;
     padding: 7px 10px;
     border-radius: 30px;
@@ -97,7 +139,7 @@ textarea {
   border-spacing: 10px;
 }
 
-#customer-address > input {
+#customer-address input {
     width: 300px;
     text-align: left;
     margin: 1px;
@@ -289,6 +331,10 @@ textarea {
 
     #footer {
         bottom: 0px;
+    }
+
+    #save, #load {
+        display: none;
     }
 
 }

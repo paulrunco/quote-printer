@@ -9,6 +9,13 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div id="load">
+
+        </div>
+        <input type="file" id="input"></input>
+        <div id="save">
+            <a id="save-anchor">Save</a>
+        </div><!--#save -->
         <div id="container">
             <div id="header">
 
@@ -39,18 +46,22 @@
             </div><!--.address-bar -->
 
             <div id="quote-heading-title">
-                <h3 class="sub-heading">Quote # <input type="text" id="quote-number"></h3>
-                <h2 class="sub-heading">Quotation</h2>
-                <h3 class="sub-heading"> Rev <input type="text" id="rev"></h3>
+                <form id="quote-heading-form">
+                    <h3 class="sub-heading">Quote # <input type="text" name="quotenum" id="quote-number"></h3>
+                    <h2 class="sub-heading">Quotation</h2>
+                    <h3 class="sub-heading"> Rev <input type="text" name="rev" id="rev"></h3>
+                </form>
             </div><!-- .quote-heading-title -->
 
             <div id="quote-heading">
                 <div id="customer-address">
-                    <input type="text" placeholder="Attention"><br />
-                    <input type="text" placeholder="Company"><br />
-                    <input type="text" placeholder="Address"><br />
-                    <input type="text" placeholder="City, State Zip"><br />
-                    <input type="text" placeholder="Country">
+                    <form id="customer-address-form">
+                        <input type="text" name="attn" placeholder="Attention"><br />
+                        <input type="text" name="company" placeholder="Company"><br />
+                        <input type="text" name="addr" placeholder="Address"><br />
+                        <input type="text" name="citystzip" placeholder="City, State Zip"><br />
+                        <input type="text" name="country" placeholder="Country">
+                    </form>
                 </div><!--.customer-address -->
                 <div id ="valid-dates">
                     <form id="valid-dates-form">

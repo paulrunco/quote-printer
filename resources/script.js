@@ -2,6 +2,11 @@ $(document).ready(function(){
     addQuoteLine(); // add first row to quote grid
     reNumber(); // number the first rows
 
+    $('#quote-number').change(function() {
+        var title = $('#quote-number').val();
+        $(document).attr("title", "Quote_" + title);
+    });
+
     // Add rows using button at bottom of page
    $("#add_row").click(function(){
        addQuoteLine();
@@ -19,7 +24,6 @@ $(document).ready(function(){
        $(this).closest('.quote-line').remove();
        reNumber();
    });
-
 });
 
 function reCalculateNet() {

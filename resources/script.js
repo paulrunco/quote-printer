@@ -2,9 +2,16 @@ $(document).ready(function(){
     addQuoteLine(); // add first row to quote grid
     reNumber(); // number the first rows
 
-    $('#quote-number').change(function() {
-        var title = $('#quote-number').val();
-        $(document).attr("title", "Quote_" + title);
+    $('#quote-number').add('#rev').change(function() {
+        var quote = $('#quote-number').val();
+        var rev = $('#rev').val();
+        if (rev == "") {
+            title = "Quote_" + quote
+        }
+        else {
+            var title = "Quote_" + quote + "_R" + rev;
+        }
+        $(document).attr("title", title);
     });
 
     // Add rows using button at bottom of page

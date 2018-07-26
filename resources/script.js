@@ -83,6 +83,7 @@ function addQuoteLine() {
                                 '<tbody>',
                             '</table>',
                         '</div><!--.pnum-line -->'].join('');
+    var ourPart = ['<div class="our-part">Our Part: <input type="text" name="ourPart" placeholder="Our part">Rev:<input type"text" name="ourRev" placeholder="Our rev"></div>']
     var lineComment = ['<div class="line-comment"><textarea placeholder="Line comments..." ></textarea></div>']
     var qtyLine = ['<div class="qty-line">',
                         '<div class="qty-line-left"></div>',
@@ -106,5 +107,5 @@ function addQuoteLine() {
                     '<div class="quote-line-controls"><a href="#" onclick="return false;" class="del-line">Delete Line</a></div>',
                 '</div><!--.quote-line -->'].join('');
 
-        $('#quote-grid').append(partLine + lineComment + qtyLine);
+        $('#quote-grid').append(partLine + ourPart + lineComment + qtyLine);
 }

@@ -190,6 +190,19 @@ textarea {
     width: 100%;
 }
 
+.our-part {
+    text-align: left;
+    margin-left: 59px;
+}
+
+.our-part input[name=ourPart] {
+    margin-right: 20px;
+}
+
+.our-part input[name=ourRev] {
+    width: 50px;
+}
+
 .line-comment {
     margin-left: 41px;
 }

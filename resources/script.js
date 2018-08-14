@@ -26,6 +26,17 @@ $(document).ready(function(){
       //$('p.net-price').text("4");
    });
 
+   // Add a price break below last price break on line
+   $('#quote-grid').on('click', '.add_break_button', function() {
+       addPriceBreak();
+   });
+
+   // Remove a price break
+   $('#quote-grid').on('click', '.delete_break', function() {
+       delPriceBreak();
+   });
+
+
    // Delete quote lines when link is clicked
    $('#quote-grid').on('click','.del-line', function(){
        $(this).closest('.quote-line').remove();
@@ -57,6 +68,14 @@ function reNumber() {
     });
 }
 
+function addPriceBreak() {
+    alert("price broken");
+}
+
+function delPriceBreak() {
+    alert("price deleted");
+}
+
 function addQuoteLine() {
     // count number of existing rows
     var lineNum = $(".quote-line").length + 1;
@@ -86,13 +105,16 @@ function addQuoteLine() {
     var ourPart = ['<div class="our-part">Our Part: <input type="text" name="ourPart" placeholder="Our part">Rev:<input type"text" name="ourRev" placeholder="Our rev"></div>']
     var lineComment = ['<div class="line-comment"><textarea placeholder="Line comments..." ></textarea></div>']
     var qtyLine = ['<div class="qty-line">',
-                        '<div class="qty-line-left"></div>',
+                        '<div class="qty-line-left">',
+                        '<div class="add-break"><button type="button" class="add_break_button">Add Break</button></div>',
+                        '</div>',
                         '<div class="qty-line-right"><table class="qty-line-table">',
                             '<thead>',
                                 '<tr>',
                                     '<td>Quantity</td>',
                                     '<td>Unit Price</td>',
                                     '<td>Net Price</td>',
+                                    '<td></td>',
                                 '</tr>',
                             '</thead>',
                             '<tbody>',
@@ -100,10 +122,12 @@ function addQuoteLine() {
                                     '<td><input type="number" name="qty" class="update-price"></td>',
                                     '<td><input type="number" name="price" class="update-price"></td>',
                                     '<td><p class="net-price">$0.00</p></td>',
+                                    '<td class="delete_break"><a href="#" onClick="return false;">Delete</a></td>',
                                 '</tr>',
                             '</tbody>',
                         '</table></div><!--.qty-line-right-->',
                     '</div><!--.qty-line-->',
+
                     '<div class="quote-line-controls"><a href="#" onclick="return false;" class="del-line">Delete Line</a></div>',
                 '</div><!--.quote-line -->'].join('');
 
